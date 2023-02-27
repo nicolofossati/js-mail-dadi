@@ -8,6 +8,7 @@ let mails = ['nicofossa01@gmail.com', 'boh@gmail.com', 'nonsaprei@yahoo.it'];
 
 const textDom = document.querySelector('#text_input');
 const buttonDom = document.querySelector('#bttn');
+const containerDom = document.querySelector('.container');
 let mail_input;
 
 
@@ -17,6 +18,7 @@ buttonDom.addEventListener('click',
         console.log(mail_input);
         const output = document.createElement('h1');
         output.classList.add('output');
+        containerDom.append(output);
 
         let check = false;
 
@@ -32,6 +34,7 @@ buttonDom.addEventListener('click',
         } else {
             output.innerHTML = "Questa mail NON fa parte della lista!";
             console.log("Questa mail NON fa parte della lista!");
+            
         }
     }
 );
